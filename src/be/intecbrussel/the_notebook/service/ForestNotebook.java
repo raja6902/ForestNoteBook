@@ -133,20 +133,20 @@ public class ForestNotebook {
 	}
 
 	public void sortPlantsbyName() {
-		List<Plant> newList = plants.stream()
+		plants = plants.stream()
 				.sorted(Comparator.comparing(Plant::getName))
 				.collect(Collectors.toList());
 		
-		    newList.forEach(System.out::println);
+		        plants.forEach(System.out::println);
 	}
 
 	public void sortAnimalByHeight() {
-		List<Animal> newlist = animals.stream()
-				.sorted(Comparator
-				.comparing(Animal::getHeight))
-				.collect(Collectors.toList());
+	       List<Animal> newList = animals.stream()
+				               .sorted(Comparator
+			                	.comparing(Animal::getHeight))
+			                 	.collect(Collectors.toList());
 		
-		newlist.forEach(System.out::println);
+		     newList.forEach(System.out::println);
 		
 
 	}

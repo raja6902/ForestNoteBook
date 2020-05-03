@@ -76,8 +76,10 @@ ForestNotebook notebook = new ForestNotebook();
 		
 		System.out.println("___________________________________________________");
 		notebook.sortPlantsbyName();
+		System.out.println("______________________________________________________");
 		
-		//notebook.sortAnimalByHeight();// sorted by animal height in Ascending order.
+		notebook.printNotebook();  // Now with printnotebook the list of animals and plant are sorted
+	
 
 	}
 
