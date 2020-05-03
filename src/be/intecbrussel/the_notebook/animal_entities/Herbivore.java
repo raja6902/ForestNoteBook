@@ -1,5 +1,6 @@
 package be.intecbrussel.the_notebook.animal_entities;
 
+import java.util.HashSet;
 import java.util.Set;
 
 import be.intecbrussel.the_notebook.plant_entities.Flower;
@@ -9,7 +10,7 @@ import be.intecbrussel.the_notebook.plant_entities.Weed;
 
 public class Herbivore extends Animal {
 
-	private Set<Plant> plantDiet;
+	private Set<Plant> plantDiet = new HashSet<>();
 
 	public Herbivore(String name) {
 		super(name);
@@ -27,7 +28,7 @@ public class Herbivore extends Animal {
 
 	public void setPlantDiet(Set<Plant> plantDiet) {
 
-		this.plantDiet = plantDiet;
+		this.plantDiet =  plantDiet;
 
 	}
 
@@ -40,11 +41,13 @@ public class Herbivore extends Animal {
 		this.plantDiet.forEach(System.out::println);
 	}
 
+	 
+
 	@Override
 	public String toString() {
-		return "Herbivore [ name=" + " " + super.getName() + " " + ", weight=" + " " + super.getWeight() + " "
-				+ ", height=" + " " + super.getHeight() + " " + ", length=" + " " + super.getLength() + " "
-				+ ", plantDiet=" + " " + plantDiet + "]";
+	return  super.getName() + "[Herbivore, " + " Weight:" + " " + super.getWeight() + " "
+			+ "Kgs"+ " Height:" + " " + super.getHeight() + " " + "meters" + ""  +
+			 "PlantDiet" + " " + plantDiet;
 	}
 
 }

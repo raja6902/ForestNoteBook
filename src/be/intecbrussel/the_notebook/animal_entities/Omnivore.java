@@ -1,5 +1,6 @@
 package be.intecbrussel.the_notebook.animal_entities;
 
+import java.util.HashSet;
 import java.util.Set;
 
 import be.intecbrussel.the_notebook.plant_entities.Flower;
@@ -9,7 +10,7 @@ import be.intecbrussel.the_notebook.plant_entities.Weed;
 
 public class Omnivore extends Animal {
 
-	private Set<Plant> plantDiet;
+	private Set<Plant> plantDiet = new HashSet<>();
 	private double maxFoodSize;
 
 	public Omnivore(String name) {
@@ -38,24 +39,25 @@ public class Omnivore extends Animal {
 
 	public void setMaxFoodSize(double maxFoodSize) {
 
-		double foodSize = (super.getHeight() > 130.00) ? (+1) : (-1);
 
-		this.maxFoodSize = foodSize;
+		this.maxFoodSize = maxFoodSize;
 
 	}
 
 	public void addPlantToDiet(Plant plant) {
-		Flower branches = new Flower("leaves");
-		Weed grass = new Weed("grass");
-		Tree bush = new Tree("bush");
-		plantDiet.add(branches);
-		plantDiet.add(bush);
-		plantDiet.add(grass);
+		 plantDiet.add(plant);
 	}
 
 	@Override
 	public String toString() {
-		return "Omnivore [plantDiet=" + plantDiet + ", maxFoodSize=" + maxFoodSize + "]";
-	}
-
+	return super.getName() + "[Omnivore,"+ " "+  "weight: " + super.getWeight()+ " " +"kgs,"+ " " +  "Height:" 
+	+ " "+ super.getHeight()+ " " + "meters,"+  ", MaxFoodSize: "+ " " + maxFoodSize + " "+ 
+			"Plant Diet " + plantDiet;
+	 
+		
+		
+		
+		
+	}		
+		
 }

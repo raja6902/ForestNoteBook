@@ -3,6 +3,7 @@ package be.intecbrussel.the_notebook.service;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import be.intecbrussel.the_notebook.animal_entities.Animal;
 import be.intecbrussel.the_notebook.animal_entities.Carnivore;
@@ -77,23 +78,11 @@ public class ForestNotebook {
 
 	}
 
-	private void removingDuplicate(Animal animal) {
-
-		boolean isDuplicate = animals.stream().anyMatch(f -> f.getName().equalsIgnoreCase(animal.getName()));
-
-		if (!isDuplicate) {
-			animals.add(animal);
-
-		} else {
-			System.out.println("Duplicate entry");
-		}
-
-	}
-
 	public void addAnimal(Animal animal) {
 		
 		
-	boolean	isDuplicate = animals.stream().anyMatch(f -> f.getName().equalsIgnoreCase(animal.getName()));
+	boolean	isDuplicate = animals.removeIf(f -> f.getName()
+			                     .equalsIgnoreCase(animal.getName()));
 
 		if (!isDuplicate && animal != null) {
 				
@@ -111,13 +100,11 @@ public class ForestNotebook {
 			System.out.println("Animal already exist");
 		}
 		
-		}
-	
-	
-
+	 }
 	public void addPlant(Plant plant) {
 
-		boolean isDuplicate = plants.stream().anyMatch(f -> f.getName().equalsIgnoreCase(plant.getName()));
+		boolean isDuplicate = plants.stream().anyMatch(f -> f.getName()
+				                     .equalsIgnoreCase(plant.getName()));
 
 		if (!isDuplicate) {
 
@@ -136,20 +123,40 @@ public class ForestNotebook {
 	}
 
 	public void sortAnimalsByName() {
-		animals.sort(Comparator.comparing(Animal::getName));
+		List<Animal> newlist = animals.stream()
+				.sorted(Comparator
+				.comparing(Animal::getName))
+				.collect(Collectors.toList());
+		
+		newlist.forEach(System.out::println);
+		
 	}
 
 	public void sortPlantsbyName() {
-		plants.sort(Comparator.comparing(Plant::getName));
+		List<Plant> newList = plants.stream()
+				.sorted(Comparator.comparing(Plant::getName))
+				.collect(Collectors.toList());
+		
+		    newList.forEach(System.out::println);
 	}
 
 	public void sortAnimalByHeight() {
-		animals.sort(Comparator.comparing(Animal::getHeight));
+		List<Animal> newlist = animals.stream()
+				.sorted(Comparator
+				.comparing(Animal::getHeight))
+				.collect(Collectors.toList());
+		
+		newlist.forEach(System.out::println);
+		
 
 	}
 
 	public void sortPlantsByHeight() {
-		plants.sort(Comparator.comparing(Plant::getHeight));
+		List<Plant> newList = plants.stream()
+				.sorted(Comparator.comparing(Plant::getName))
+				.collect(Collectors.toList());
+		
+		    newList.forEach(System.out::println);
 	}
 
 }

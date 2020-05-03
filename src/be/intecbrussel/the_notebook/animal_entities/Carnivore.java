@@ -21,14 +21,14 @@ public class Carnivore extends Animal {
 
 	public void setMaxFoodSize(double maxFoodSize) {
 
-		double foodSize = (super.getHeight() > 120.00) ? (+1) : (-1);
-
-		this.maxFoodSize = foodSize;
+		this.maxFoodSize = maxFoodSize;
 	}
 
 	@Override
 	public String toString() {
-		return "Carnivore [ Name = " + " " + super.getName() + " " + " maxFoodSize=" + " " + maxFoodSize + "]";
+		return  super.getName() +  "[Carnivore, " + "Weight:" +" "+ super.getWeight() 
+		+" "+"Kgs " + " "+ "Height:" + " " + super.getHeight()  + " " + "meters" + " MaxFoodSize:"
+	    + " " + maxFoodSize + " " +"Kgs";
 	}
 
 }

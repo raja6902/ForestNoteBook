@@ -2,6 +2,6 @@ package be.intecbrussel.the_notebook.plant_entities;
 
 public enum Scent {
 
-	SWEET, ORANGE, PINEAPPLE, MUSKY, ERTHY, SOUR;
+	SWEET, ORANGE, PINEAPPLE, MUSKY, EARTHY, SOUR;
 
 }
