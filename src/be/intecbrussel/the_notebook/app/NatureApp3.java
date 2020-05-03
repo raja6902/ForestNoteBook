@@ -72,10 +72,12 @@ ForestNotebook notebook = new ForestNotebook();
 		notebook.addPlant(alpine);
 		notebook.addPlant(blackthorn);
 		
-		notebook.sortAnimalsByName();
+		notebook.sortAnimalsByName(); // sorted by name.
 		
 		System.out.println("___________________________________________________");
 		notebook.sortPlantsbyName();
+		
+		//notebook.sortAnimalByHeight();// sorted by animal height in Ascending order.
 
 	}
 
