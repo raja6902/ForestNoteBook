@@ -39,7 +39,7 @@ ForestNotebook notebook = new ForestNotebook();
 		// 9 different type of animals.
 		Set<Plant> plantDiet = new HashSet<>();
 		
-		Herbivore sheep = new Herbivore("BlackSheep" , 20.50, 1.50, 2.00);
+		Herbivore sheep = new Herbivore("Sheep" , 20.50, 1.50, 2.00);
 	
 		notebook.addAnimal(sheep);sheep.addPlantToDiet(hedge); // adding plant to the diet
 		
