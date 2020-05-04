@@ -25,7 +25,7 @@ public class ForestNotebook {
 
 	}
 
-	public List<Carnivore> geCarnivores() {
+	public List<Carnivore> getCarnivores() {
 		carnivores.stream().forEach(System.out::println);
 
 		return carnivores;

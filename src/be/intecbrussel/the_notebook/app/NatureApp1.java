@@ -49,11 +49,11 @@ public class NatureApp1 {
 		Herbivore goat  = new Herbivore ("Goat" , 15.50, 1.25, 1.20);
 		notebook.addAnimal(goat); goat.addPlantToDiet(indica);
 		
-		Carnivore lion = new Carnivore ("Lion" , 50.00,2.50,2.00);
-		notebook.addAnimal(lion); lion.setMaxFoodSize(15.00);
+		Carnivore lion = new Carnivore ("Lion" , 50.00,6.00,2.00);
+		notebook.addAnimal(lion); lion.setMaxFoodSize(10.00);  // Lion is shorter than bear so eat less than bear.
 		
-		Omnivore  bear = new Omnivore ("Bear", 85.00, 6.00, 2.00);
-		notebook.addAnimal(bear); bear.addPlantToDiet(blackthorn); bear.setMaxFoodSize(9.50); // both food and plants
+		Omnivore  bear = new Omnivore ("Bear", 85.00, 7.50, 2.00);
+		notebook.addAnimal(bear); bear.addPlantToDiet(blackthorn); bear.setMaxFoodSize(19.50); // bear maxfoodsize depends upon his height
 		Omnivore  squirell =  new Omnivore ("squirell", 2.50,0.25,0.72);
 		
 		notebook.addAnimal(squirell); squirell.addPlantToDiet(rose); squirell.setMaxFoodSize(0.50);
@@ -62,11 +62,11 @@ public class NatureApp1 {
 		Omnivore racoons = new Omnivore ("racoon", 5.86, 1.25, 1.05);
 		notebook.addAnimal(racoons); racoons.addPlantToDiet(tulip); racoons.setMaxFoodSize(2.50);
 		
-		Carnivore jaguar = new Carnivore ("Jaguar" , 40.50,2.50,2.25);
+		Carnivore jaguar = new Carnivore ("Jaguar" , 40.50,3.50,2.25);
 		notebook.addAnimal(jaguar); jaguar.setMaxFoodSize(9.50);
 		
-		Carnivore leopard = new Carnivore("Leopard", 40.25, 2.35, 2.26);
-        notebook.addAnimal(leopard); leopard.setMaxFoodSize(10.55); 
+		Carnivore leopard = new Carnivore("Leopard", 40.25, 5.35, 2.26);
+        notebook.addAnimal(leopard); leopard.setMaxFoodSize(9.45); 
 	//	notebook.addAnimal(leopard); // to check if removing duplicate method workinh.
 		notebook.addPlant(tulip);
 		notebook.addPlant(rose);
