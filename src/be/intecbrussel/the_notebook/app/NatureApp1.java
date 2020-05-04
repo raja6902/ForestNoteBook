@@ -67,7 +67,7 @@ public class NatureApp1 {
 		
 		Carnivore leopard = new Carnivore("Leopard", 40.25, 5.35, 2.26);
         notebook.addAnimal(leopard); leopard.setMaxFoodSize(9.45); 
-	//	notebook.addAnimal(leopard); // to check if removing duplicate method workinh.
+	//	notebook.addAnimal(leopard); // to check if removing duplicate method working.
 		notebook.addPlant(tulip);
 		notebook.addPlant(rose);
 		notebook.addPlant(indica);
